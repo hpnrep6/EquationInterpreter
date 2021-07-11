@@ -10,6 +10,7 @@ Intepreter for mathematical equations
 - Subtraction: -
 - Multiplication: *
 - Division: /
+- Modulo: %
 - Parenthesis: ( )
 
 ![ex1](https://user-images.githubusercontent.com/57055412/125211097-ef5d8f00-e271-11eb-9df0-6c80bfbd13c5.png)
