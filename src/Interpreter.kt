@@ -36,8 +36,8 @@ class Interpreter(input: String, tokens: MutableList<Token>) {
         }
     }
 
-    fun mult_div(): Double {
-        var total: Double = num()
+    fun mult_div(first: Boolean = false): Double {
+        var total: Double = num(first)
 
         while(!atEnd()) {
             when (tokens[xLoc].type) {
@@ -91,10 +91,14 @@ class Interpreter(input: String, tokens: MutableList<Token>) {
         return total
     }
 
-    fun num(): Double {
+    fun num(first: Boolean = false): Double {
         if(atEnd()) {
             error(-1)
             return 0.0
+        }
+
+        if(first) {
+            return add_sub()
         }
 
         when(tokens[xLoc].type) {
@@ -118,7 +122,7 @@ class Interpreter(input: String, tokens: MutableList<Token>) {
     }
 
     fun expr(): Double {
-        var total = mult_div()
+        var total = mult_div(true)
         return total + add_sub()
     }
 
