@@ -49,6 +49,10 @@ class Interpreter(input: String, tokens: MutableList<Token>) {
                     ++xLoc
                     total /= num()
                 }
+                Token.TokenType.MOD -> {
+                    ++xLoc
+                    total %= num()
+                }
                 Token.TokenType.ADD,
                 Token.TokenType.SUB,
                 Token.TokenType.PAREN_R -> {
