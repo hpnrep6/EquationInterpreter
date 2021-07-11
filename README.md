@@ -1,8 +1,8 @@
-## Description
+## Description:
 
 Intepreter for mathematical equations
 
-## Supports:
+## Features:
 
 ### Operations
 
