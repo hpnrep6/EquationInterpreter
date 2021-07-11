@@ -2,7 +2,7 @@
 
 Intepreter for mathematical equations
 
-## Features:
+## Supports:
 
 ### Operations
 
