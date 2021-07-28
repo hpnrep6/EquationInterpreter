@@ -1,6 +1,7 @@
 ## Description:
 
-Intepreter for mathematical equations
+Intepreter for mathematical equations.
+Based on https://ruslanspivak.com/lsbasi-part1/
 
 ## Supports:
 
