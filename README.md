@@ -30,5 +30,5 @@ Intepreter for mathematical equations
 
 - Print abstract syntax tree
 
-![Screenshot from 2021-07-27 22-13-37](https://user-images.githubusercontent.com/57055412/127252925-d3f85c87-c79e-4f56-a2dd-ab96b58a9c62.png)
+![Screenshot from 2021-07-27 22-22-19](https://user-images.githubusercontent.com/57055412/127253574-483ebeb8-128e-4bed-960e-889877b858e8.png)
 
