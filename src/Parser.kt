@@ -47,6 +47,11 @@ class Parser(input : String, tokens : MutableList<Token>) {
                     root = Div(root, num())
                 }
 
+                Token.TokenType.MOD -> {
+                    ++index
+                    root = Mod(root, num())
+                }
+
                 Token.TokenType.ADD,
                 Token.TokenType.SUB,
                 Token.TokenType.PAREN_R -> {

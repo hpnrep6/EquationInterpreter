@@ -2,6 +2,10 @@ abstract class Node {
     abstract fun visit(visitor : Visitor) : Double
 }
 
+fun getName(obj: Any) : String {
+    return obj::class.toString().substring(6)
+}
+
 class Number(value : Double) : Node() {
     val value = value
 
@@ -24,7 +28,7 @@ abstract class Binary(left : Node, operator : (Double, Double) -> Double, right 
     }
 
     override fun toString(): String {
-        return "Binary ( $left, $right )"
+        return "${getName(this)} ( $left, $right )"
     }
 }
 
@@ -37,7 +41,7 @@ abstract class Unary(operator : (Double) -> Double, right : Node) : Node() {
     }
 
     override fun toString(): String {
-        return "Unary ( $right )"
+        return "${getName(this)} ( $right )"
     }
 }
 
@@ -57,6 +61,10 @@ fun div(a : Double, b : Double) : Double {
     return a / b
 }
 
+fun mod(a : Double, b : Double) : Double {
+    return a % b
+}
+
 class Add(left: Node, right: Node) : Binary(left, ::add, right) {
 
 }
@@ -70,6 +78,10 @@ class Mult(left: Node, right: Node) : Binary(left, ::mult, right) {
 }
 
 class Div(left: Node, right: Node) : Binary(left, ::div, right) {
+
+}
+
+class Mod(left: Node, right: Node) : Binary(left, ::mod, right) {
 
 }
 
